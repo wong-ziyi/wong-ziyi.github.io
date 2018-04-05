@@ -145,10 +145,22 @@ h3.title {
     padding-bottom: 0.2em;
 	margin-bottom: 1em;
 }
+h4.title {
+    font-size: 2em;
+    text-align: center;
+    color: #008B8B;
+    border-bottom: 2px double rgba(247, 197, 106, 0.35);
+    padding-bottom: 0.2em;
+	margin-bottom: 1em;
+}
 p {
     font-size: 1em;
     color: #999;
     line-height: 1.8em;
+}
+p.hangingIndent { 
+text-indent: -17px;
+padding-left: 17px;
 }
 .about-right {
     padding-left: 5em;
@@ -1096,6 +1108,5 @@ h3.title {
 .contact-form textarea {
     font-size: 0.9em;
 }
-
 }
 /*--//responsive-design---*/
