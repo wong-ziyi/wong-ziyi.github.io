@@ -226,13 +226,13 @@ padding-left: 17px;
     padding: 0 1.2em;
 }
 .work-info h5 span.glyphicon {
-    font-size: 0.9em;
+    font-size: 0.93em;
     color: #fff;
     background: #008B8B;
-    padding: 1em;
-    -webkit-border-radius: 70%;
-    -moz-border-radius: 70%;
-    border-radius: 70%;
+    padding: 0.3em;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
     -webkit-transition: .5s all;
     -moz-transition: .5s all;
     transition: .5s all;
@@ -247,7 +247,7 @@ padding-left: 17px;
     margin-left: -8em;
 }
 .work-left2 h5 span.glyphicon {
-    margin-left: 4em;
+    margin-left: 6em;
     margin-right: -7.3em;
     z-index: 9;
 }
