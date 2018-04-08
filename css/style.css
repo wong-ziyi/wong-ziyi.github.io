@@ -222,16 +222,23 @@ padding-left: 12.5px;
     border-color: transparent transparent transparent rgb(0, 139, 139);
 }
 .work-info h5 {
-	  text-align: justify;
+	text-align: justify;
     font-size: 1.3em;
     color: #F7E612;
     margin-bottom: .5em;
-    border: 1px solid #F7E612;
-    display: inline-block;
-    padding: 0em 1em 0.5em 1em;
-		line-height: 100%;
+    padding: 0em .5em 0em 0.5em;
+}
+.work-info h5 span.text{
+	margin-top: 1.6%;
+    font-size: 1.3em;
+    color: #F7E612;
+	display: inline-block;
+	border: 1px solid #F7E612;
+    padding: 0em .5em 0em 0.5em;
+	line-height: 150%;
 }
 .work-info h5 span.glyphicon {
+	float: left;
     font-size: 0.93em;
     color: #fff;
     background: #008B8B;
@@ -249,8 +256,7 @@ padding-left: 12.5px;
     -ms-transform: scale(1);
 }
 .work-right h5 span.glyphicon {
-    margin-right: 5em;
-    margin-left: -7.9em;
+    margin-left: -7.4em;
 }
 .work-left2 h5 span.glyphicon {
     margin-left: 6em;
