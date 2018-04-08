@@ -237,6 +237,15 @@ padding-left: 12.5px;
     padding: 0em .5em 0em 0.5em;
 	line-height: 150%;
 }
+.work-info h5 span.text-edu{
+	margin-top: 1.6%;
+    font-size: 1.3em;
+    color: #000000;
+	display: inline-block;
+	border: 1px solid #F7E612;
+    padding: 0em .5em 0em 0.5em;
+	line-height: 150%;
+}
 .work-info h5 span.glyphicon {
 	float: left;
     font-size: 0.93em;
