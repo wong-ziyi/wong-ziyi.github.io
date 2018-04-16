@@ -387,7 +387,7 @@ background: #F7E612;
 }
 .resp-tabs-container {
 	padding: 0px;
-	clear: left;
+	clear: none;
 }
 h2.resp-accordion {
 	cursor: pointer;
@@ -404,7 +404,6 @@ h2.resp-accordion {
 /*--img-hover--*/
 .portfolio-grids {
     margin-top: 2em;
-	float: left;
 }
 .grid {
 	position: relative;
@@ -988,7 +987,6 @@ p {
 }
 .portfolio-grids {
     width: 50%;
-	float: left;
 }
 .grid .figcaption {
     padding: 0.5em 1em;
@@ -1014,7 +1012,7 @@ p {
 }
 .portfolio-grids {
     width: 100%;
-    float: left;
+    float: none;
     padding: 0;
 }
 .contact-form input[type="text"] {
