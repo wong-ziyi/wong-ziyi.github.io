@@ -404,6 +404,7 @@ h2.resp-accordion {
 /*--img-hover--*/
 .portfolio-grids {
     margin-top: 2em;
+	float: left;
 }
 .grid {
 	position: relative;
@@ -987,6 +988,7 @@ p {
 }
 .portfolio-grids {
     width: 50%;
+	float: left;
 }
 .grid .figcaption {
     padding: 0.5em 1em;
@@ -1012,7 +1014,7 @@ p {
 }
 .portfolio-grids {
     width: 100%;
-    float: none;
+    float: left;
     padding: 0;
 }
 .contact-form input[type="text"] {
