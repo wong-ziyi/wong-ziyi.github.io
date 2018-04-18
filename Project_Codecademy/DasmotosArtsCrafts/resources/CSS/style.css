@@ -1,0 +1,38 @@
+h1 {
+  font-family: Helvetica;
+  font-size: 100px;
+  font-weight: bold;
+  color: khaki;
+  text-align: center;
+}
+h2 {
+  font-family: Helvetica;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+h3 {
+  font-family: Arial;
+  font-weight: bold;
+}
+.description {
+  font-family: Arial;
+}
+.highlight {
+  display: inline;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: blue;
+}
+.image {
+  background-image: url("../../resources/images/pattern.jpeg");
+}
+.BC01 {/* background-color 01 */
+  background-color: mediumspringgreen;
+}
+.BC02 {/* background-color 02 */
+  background-color: lightcoral;
+}
+.BC03 {/* background-color 03 */
+  background-color: skyblue;
+}
