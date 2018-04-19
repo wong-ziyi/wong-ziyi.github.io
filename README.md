@@ -1,4 +1,4 @@
-# To the teachers who are going to check my assignment
+# To the instructor who are going to check my assignment
 I am very sorry to mix all assignments together. Here I made a list for you to locate my assignments.
 Thanks for your patience.
 1. Reviewable project: Dasmoto's Arts & Crafts
