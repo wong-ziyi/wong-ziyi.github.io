@@ -1,4 +1,4 @@
-h1, h2, h3, p, .description{
+h1, h2, h3, p, .description, .highlight {
   font-family: Helvetica;
 }
 h1 {
@@ -17,12 +17,11 @@ h3 {
 }
 .highlight {
   display: inline;
-  font-family: Helvetica;
   font-weight: bold;
   color: blue;
 }
 .image {
-  background-image: url("../../resources/images/pattern.jpeg");
+  background-image: url("../images/pattern.jpeg");
 }
 .BC01 {/* background-color 01 */
   background-color: mediumspringgreen;
