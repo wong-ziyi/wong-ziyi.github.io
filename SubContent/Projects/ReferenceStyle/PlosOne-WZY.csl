@@ -20,7 +20,7 @@
     <category citation-format="numeric"/>
     <category field="generic-base"/>
     <summary>A style based on Samples of Formatted References for Authors of Journal Articles (Specialized for PlosOne)</summary>
-    <updated>2018-04-29T09:58:37+00:00</updated>
+    <updated>2018-04-29T11:23:25+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <macro name="author">
@@ -55,7 +55,7 @@
   <macro name="publisher">
     <text variable="publisher-place" suffix=": "/>
     <text variable="publisher" suffix="; "/>
-    <text macro="year-date" suffix=". "/>
+    <text macro="year-date"/>
   </macro>
   <macro name="edition">
     <choose>
@@ -95,7 +95,7 @@
       <text macro="author" suffix=". "/>
       <choose>
         <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
-          <group delimiter=", ">
+          <group delimiter=" ">
             <text variable="title"/>
             <text macro="edition"/>
             <text macro="publisher"/>
@@ -105,8 +105,8 @@
           <text variable="title" suffix=". "/>
           <text term="in" suffix=": "/>
           <text macro="editor" strip-periods="false" suffix=". "/>
-          <text variable="container-title" form="short" text-case="title" suffix=". "/>
-          <text macro="edition" suffix=", "/>
+          <text variable="container-title" text-case="title" suffix=". "/>
+          <text macro="edition" suffix=" "/>
           <text macro="publisher"/>
           <group delimiter=" ">
             <label variable="page" form="short"/>
@@ -154,7 +154,7 @@
           <text variable="DOI" prefix=". doi:"/>
         </if>
         <else>
-          <text macro="access" prefix=". "/>
+          <text value=""/>
         </else>
       </choose>
     </layout>
