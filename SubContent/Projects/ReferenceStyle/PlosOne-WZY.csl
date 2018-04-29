@@ -20,7 +20,7 @@
     <category citation-format="numeric"/>
     <category field="generic-base"/>
     <summary>A style based on Samples of Formatted References for Authors of Journal Articles (Specialized for PlosOne)</summary>
-    <updated>2018-04-29T08:50:25+00:00</updated>
+    <updated>2018-04-29T09:58:37+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <macro name="author">
@@ -35,7 +35,7 @@
   </macro>
   <macro name="editor">
     <names variable="editor">
-      <name delimiter-precedes-last="always" initialize-with="." name-as-sort-order="all" sort-separator=" "/>
+      <name delimiter-precedes-last="always" initialize-with="" name-as-sort-order="all" sort-separator=" "/>
       <label text-case="lowercase" prefix=", "/>
     </names>
   </macro>
@@ -132,9 +132,20 @@
           <group>
             <text variable="title" suffix=". "/>
             <text variable="container-title-short" form="short" text-case="title" suffix="."/>
-            <text macro="year-date" prefix=" " suffix=";"/>
-            <text variable="volume" suffix=":"/>
-            <text variable="page" form="short"/>
+            <choose>
+              <if match="any" variable="issue">
+                <text macro="year-date" prefix=" " suffix=";"/>
+                <text variable="volume"/>
+                <text variable="issue" prefix="(" suffix="):"/>
+              </if>
+              <else>
+                <date date-parts="year" form="text" variable="issued" prefix=" " suffix=";">
+                  <date-part name="year"/>
+                </date>
+                <text variable="volume" suffix=":"/>
+              </else>
+            </choose>
+            <text variable="page" form="short" prefix=" "/>
           </group>
         </else>
       </choose>
