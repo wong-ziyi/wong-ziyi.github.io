@@ -8,13 +8,18 @@
 <body>
 	<!-- start -->
 <div class="body">
-  <span id="forkongithub"><a href="Blog.html">My Homepage</a></span>
+  <span id="forkongithub"><a href="../../index.html">My Homepage</a></span>
     <div align="center">
       <h3> <b>Simulation of the PDL-osteocytes crosstalk</b> </h3>
       <p>Presumptions</p>
       <p class="note">
-        Suppose that
+        Suppose a 85\(\mu\) length one dimensional even space with 17 evenly distributated osteocytes on a interval of 5\(\mu\). Each osteocyte produces sclerostin following the sine function with a period of 24 hours. Meanwhile, each osteocyte could consume a certain amount of sclerostin in a stable level.<br/>
+        <br/>
+        This one dimensional space will strat with PDL cells. Those cells could produce some factors that only change the phase of the sine function that control the production of sclerostin in osteocytes. This influence is concentration-dependent.<br/>
+        <br/>
+        There are no flow in this space, and all solids (PDL produced factors and sclerostin) are simply diffusive in this space without interactions to each other.
       </p>
+      <p>Equations</p>
       <p class="note">
         The diffusion equation for the solids concentration in a solvent is given by
       </p>
@@ -28,8 +33,23 @@
         This equation can solved using finite difference method giving
       </p>
       <div class="formula">
-        $$ \frac{ \partial \varphi}{ \partial t } = D \frac{ \partial^{2} \varphi }{ \partial x^{2} } + S $$
+        $$ \frac{C^{(n+1)}_{i}-C^{(n)}_{i}}{\varDelta t} = D \cdot \frac{C^{(n)}_{i+1}-2\cdot C^{(n)}_{i}+C^{(n)}_{i-1}}{\varDelta x^2}+S_{i} $$
       </div>
+      <p class="note">
+        where \(C\) is the solids concentration scalar field; \(n\) is time; \(i\) is x-axis indices; and \(S\) is the resource. We can rearrage this equation to get
+      </p>
+      <div class="formula">
+        $$ C^{(n+1)}_{i}=C^{(n)}_{i}+\varDelta t\cdot D \cdot \frac{C^{(n)}_{i+1}-2 \cdot C^{(n)}_{i}+C^{(n)}_{i-1}}{\varDelta x^2}+S_{i} $$
+      </div>
+      <p class="note">
+        Since we assume that each osteocyte produces sclerostin following the sine function with a period of 24 hours and consumes a certain amount of sclerostin in a stable level. It could be gaven by
+      </p>
+      <div class="formula">
+        $$ S= 0.07picomolar\cdot[\sin(\frac{2\cdot \pi\cdot 3600\cdot t}{24}+\alpha\cdot\pi)+0.5] $$
+      </div>
+      <p class="note">
+        where \(\alpha\) is the ratio of PDL produced factors concentration on current position to the boundary condition of PDL produced factors with higher value. Its range is \(0\leq\alpha\leq 1\).
+      </p>
       <video width="80%" controls>
         <source src="../../images/Only_Ost.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
