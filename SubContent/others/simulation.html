@@ -18,7 +18,7 @@
 <div class="body">
   <span id="forkongithub"><a href="../../index.html">My Homepage</a></span>
     <div align="center">
-      <h3> <b>Simulation of the PDL-osteocytes crosstalk</b> </h3>
+      <h3> <b>PDL induced change of circadian rhythm in osteocyte could change the spatial distribution of osteocyte produced protein</b> </h3>
       <p>Presumptions</p>
       <p class="note">
         Suppose a 85\(\mu\) length one dimensional even space with 17 evenly distributated osteocytes on a interval of 5\(\mu\). Each osteocyte produces sclerostin following the sine function with a period of 24 hours. Meanwhile, each osteocyte could consume a certain amount of sclerostin in a stable level.<br/>
@@ -53,7 +53,7 @@
         Since we assume that each osteocyte produces sclerostin following the sine function with a period of 24 hours and consumes a certain amount of sclerostin in a stable level. It could be gaven by
       </p>
       <div class="formula">
-        $$ S= 0.07picomolar\cdot[\sin(\frac{2\cdot \pi\cdot 3600\cdot t}{24}+\alpha\cdot\pi)+0.5] $$
+        $$ S= 0.07 picomolar\cdot[\sin(\frac{2\cdot \pi\cdot 3600\cdot t}{24}+\alpha\cdot\pi)+0.5] $$
       </div>
       <p class="note">
         where \(\alpha\) is the ratio of PDL produced factors concentration on current position to the boundary condition of PDL produced factors with higher value. Its range is \(0\leq\alpha\leq 1\).
@@ -61,17 +61,46 @@
       <div class="row">
         <div class="column">
           <p><center>Initial Condition for \(pC\)</center></p>
+          <p class="note"><center><font size="3" color="gray">
+            where the prefix \(p\) denotes the \(pC\) as the concentration of PDL produced factors
+          </font></center></p>
           <div class="formula">
-            $$ pC_{(x, 0)}=0$$
+            $$ pC_{(x, 0)}=0, \quad 0\leq x\leq 85 $$
+          </div>
+          <p><center>Boundary Condition for \(pC\)</center></p>
+          <p><center><font size="3" color="gray">Before force load</font></center></p>
+          <div class="formula">
+            $$ pC_{(x, 0)}=0, \quad 0\leq x\leq 85 $$
+          </div>
+          <p class="note"><center><font size="3" color="gray">After force load</font></center></p>
+          <div class="formula">
+            $$ pC_{(0, t)}=10 \ nM \\ pC_{(85, t)}=0, \quad t\geq 0 $$
           </div>
         </div>
         <div class="column">
           <p><center>Initial Condition for \(oC\)</center></p>
+          <p class="note"><center><font size="3" color="gray">
+            where the prefix \(o\) denotes the \(oC\) as the concentration of osteocyte produced sclerostin
+          </font></center></p>
           <div class="formula">
-            $$ pC_{(x, 0)}=0$$
+            $$ oC_{(x, 0)}=0.17 \ nM, \quad 0\leq x\leq 85 $$
+          </div>
+          <p><center>Boundary Condition for \(oC\)</center></p>
+          <div class="formula">
+            $$ oC_{(0, t)}=oC_{(85, t)}=0.17 \ nM, \quad t\geq 0 $$
           </div>
         </div>
       </div>
+      <p>Estimation of Diffusion Coefficient of Sclerostin in Bone</p>
+      <p class="note">
+        We employed the Graham's law to estimate the diffusion coefficient of sclerostin in bone, which is gaven by
+      </p>
+      <div class="formula">
+        $$ \frac{D_1}{D_2}=\sqrt{\frac{M_2}{M_1}} $$
+      </div>
+      <p class="note">
+        Where \(Rate_1\) is the rate of effusion
+      </p>
       <video width="80%" controls>
         <source src="../../images/Only_Ost.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
