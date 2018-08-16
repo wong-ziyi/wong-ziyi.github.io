@@ -12,7 +12,14 @@
       float: left;
       width: 50%;
   }
-
+  .left{
+    float: left;
+    width:75%;
+  }
+  .right{
+    float: left;
+    width:25%;
+  }
   /* Clear floats after the columns */
   .row:after {
       content: "";
