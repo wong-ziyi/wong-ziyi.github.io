@@ -21,7 +21,7 @@
     width:25%;
   }
   .right:hover {
-      transform: scale(1.5);
+      transform: scale(2);
   }
   /* Clear floats after the columns */
   .row:after {
